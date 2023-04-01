@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html>
+    <head>
+      <title>Home page</title>
+      <style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+</style>
+    </head>
+    <body>
+    <div align="right" class="new"> 
+     
+    <div class="login">    
+    <form id="login" method="get" action="login.php">    
+        <label><b>User Name     
+        </b>    
+        </label>    
+        <input type="text" name="Uname" id="Uname" placeholder="Username">    
+        <br><br>    
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+        <br><br>    
+        <!--<input type="button" name="log" id="log" value="Log In Here"> -->
+        <button class="button button1"><a href="{% url 'sendmail' %}">Proceed to send mails</a></button>      
+        <br><br>    
+    </form>     
+    </div>
+<form action = "{% url 'ib' %}" method = "post">
+{% csrf_token %}
+	<label for="name">Your name: </label>
+	<input id="name" type="text" name="name">
+	<input type="submit" value="OK">
+</form>
+</div>
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"
+
+</body>
+    
+  </html>
+  

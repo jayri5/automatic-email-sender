@@ -1,0 +1,18 @@
+body {
+    background: white url("hi.jpg");
+    background-repeat: repeat-y;
+    background-size: 700px 300px;
+    background-color: yellow;
+}
+
+.new{
+    color: blue;
+    padding-top: 150px;
+    padding-left: 100px;
+    padding-right: 150px;
+}
+
+.footer{
+    color: black;
+    padding-top: 125px;
+}
